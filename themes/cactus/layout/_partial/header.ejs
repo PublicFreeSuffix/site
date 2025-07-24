@@ -1,0 +1,17 @@
+<div style="margin-top: -60px;text-align: center;margin-bottom: -50px;">
+    <a class="u-url u-uid" style="background-image: none !important;" href="<%- url_for("/") %>">
+        <img id="logo" alt style="height: 250px;width: 250px;" src="<%- url_for(theme.logo.url) %>" />
+    </a>
+</div>
+<header id="header">
+  <div id="nav" style="text-align: center;">
+    <ul>
+      <li class="icon">
+        <a href="#" aria-label="<%- __('icons.menu') %>"><i class="fa-solid fa-bars fa-2x"></i></a>
+      </li>
+      <% for (var i in theme.nav) { %><!--
+     --><li><a href="<%- url_for(theme.nav[i]) %>"><%= __('nav.'+i).replace("nav.", "") %></a></li><!--
+   --><% } %>
+    </ul>
+  </div>
+</header>
